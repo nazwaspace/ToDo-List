@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>To-Do List</h1>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="🔍 Cari tugas...">
+            </div>
+        </header>
+
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="Apa tugasmu?">
+            <input type="date" id="todo-date"> <button id="add-btn">
+                <span class="icon">+</span>
+            </button>
+        </div>
+
+        <div class="controls">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="active">Aktif</button>
+                <button class="filter-btn" data-filter="completed">Selesai</button>
+            </div>
+            
+            <select id="sort-select">
+                <option value="newest">Terbaru</option>
+                <option value="oldest">Terlama</option>
+                <option value="closest">Deadline</option>
+            </select>
+        </div>
+
+        <ul id="todo-list">
+            </ul>
+        
+        <p id="empty-msg" class="hidden">Tidak ada tugas dalam daftar ini.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
